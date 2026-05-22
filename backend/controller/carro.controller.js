@@ -12,8 +12,13 @@ const cadastrar = async (req,res) =>{
         precoVenda = valores.precoFabrica * 1.25
     }
 
-    const valores2{
-        
+    const valores2 = {
+        nome: valores.nome,
+        marca: valores.marca,
+        categoria: valores.categoria,
+        ano: valores.ano,
+        precoFabrica: valores.precoFabrica,
+        precoVenda: precoVenda
     }
 
     try{
@@ -26,4 +31,14 @@ const cadastrar = async (req,res) =>{
     }
 }
 
-module.exports = {cadastrar}
+
+const listar = async(req,res)=>{
+    try{
+        const carros = await Carro.findAll()
+        res.status(201).json(carros)
+    }catch{
+        res.status(500).json({message: 'Não foi possível listar os dados dos veículos.'})
+    }
+}
+
+module.exports = { cadastrar, listar }

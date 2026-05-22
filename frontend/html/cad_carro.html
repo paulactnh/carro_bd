@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/cad_carro.js"defer></script>
+    <title>Cadastro de Veículos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./cad_carro.html">Cadastro</a>
+            <a href="./list_carro.html">Listar</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Cadastro de Veículos</h1>
+        </article>
+        <br>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome"><br><br>
+            <label for="marca">Marca:</label><br>
+            <input type="text" id="marca"><br><br>
+            <label for="categoria">Categoria:</label><br>
+            <select id="categoria">
+                <option value="popular">Popular</option>
+                <option value="sedan">Sedan</option>
+                <option value="luxo">Luxo</option>
+            </select>
+            <br>
+            <label for="ano">Ano:</label><br>
+            <input type="text" id="ano"><br><br>
+            <label for="precoFabrica">Preco de Fábrica:</label><br>
+            <input type="text" id="precoFabrica"><br><br>
+            <button id="btn_cad">Cadastrar</button>
+        </form>
+        <div id="res"></div>
+    </main>
+</body>
+</html>

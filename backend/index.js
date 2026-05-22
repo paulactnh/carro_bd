@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 //------------------- Rotas ---------------------
 app.post('/carro', carroController.cadastrar)
-
+app.get('/carros', carroController.listar)
 
 
 app.get('/',(req,res)=>{
